@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Scoreboard from './components/Scoreboard';
+import  {useState} from 'react';
+import Cards from './components/Cards'
 
 function App() {
+
+  const [current, setCurret] = useState(0);
+  const [best, setBestState] = useState(0);
+  const [reset, setReset] = useState(false)
+
+  const addCurrent = () => {
+    console.log(current)
+    setCurret((c) => c + 1);
+  }
+  
+  const bestSet = () => {
+    
+    setBestState((b)=> b >= current ? b : current);
+    setCurret(0);
+    setReset(true);
+
+  }
+
+  
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Scoreboard current={current} best={best}/>
+      <Cards addCurrent={addCurrent} setBest={bestSet} reset={reset} setReset={setReset} />
     </div>
   );
 }
