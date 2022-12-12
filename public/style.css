@@ -1,0 +1,63 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    width: 300px;
+    border-radius: 15px;
+    cursor: pointer;
+    transform: auto;
+    transition: all height 200ms;
+
+}
+
+.card:hover {
+    transform:  perspective(20px) translateZ(1px) ;
+}
+
+
+.card img{
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.card h2 {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-wrapper {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+}
+.scoreboard {
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+}
+
+.scoreboard > * {
+    font-size: 24px;
+}

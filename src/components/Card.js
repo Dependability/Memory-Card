@@ -34,8 +34,12 @@ const Card = (props) => {
 
     }    
 
-    return (<div onClick={click}>
-        Card-{props.number}
+    return (<div onClick={click} className='card'>
+        <div className='image-wrapper'>
+        <img src={props.src} alt="" />
+        </div>
+        <h2 className="character-name">{props.name}</h2>
+
 
 
     </div>)

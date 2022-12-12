@@ -2,9 +2,9 @@
 const Scoreboard = (props) => {
 
     return (
-        <div>
-            <p>Current Score: {props.current}</p>
-            <p>Best Score: {props.best}</p>
+        <div className="scoreboard">
+            <p className="currentScore">Current Score: {props.current}</p>
+            <p className="bestScore">Best Score: {props.best}</p>
         </div>
     )
 }
