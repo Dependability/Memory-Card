@@ -7,7 +7,8 @@ function App() {
 
   const [current, setCurret] = useState(0);
   const [best, setBestState] = useState(0);
-  const [reset, setReset] = useState(false)
+  const [reset, setReset] = useState(false);
+
 
   const addCurrent = () => {
     console.log(current)
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Scoreboard current={current} best={best}/>
-      <Cards addCurrent={addCurrent} setBest={bestSet} reset={reset} setReset={setReset} />
+      <Cards addCurrent={addCurrent} setBest={bestSet} reset={reset} setReset={setReset} sounds={[new Audio('./sounds/correct-6033.mp3'), new Audio('./sounds/negative_beeps-6008.mp3')]}/>
     </div>
   );
 }

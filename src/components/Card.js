@@ -15,12 +15,15 @@ const Card = (props) => {
 
     function click() {
         if (!clicked) {
-            console.log("You have pressed " + props.number);
-            //add one to current
+            
+            props.sounds[0].play();
             props.addScore();
             
+            
         } else {
-            //set best Score and reset current
+            
+            const incorrect = new Audio('./sounds/negative_beeps-6008.mp3');
+            props.sounds[1].play();
             props.setBest()
 
         }

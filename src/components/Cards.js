@@ -57,7 +57,7 @@ const Cards = (props) => {
     }, []);
 
     return <div className='cards'>
-        {cards.map((elem, ind)=> <Card addScore={props.addCurrent} setBest={props.setBest} key={elem.number} shuffle={shuffle} number={elem.number} reset={props.reset} setReset = {props.setReset} name={elem.name} src={elem.src}/>)}
+        {cards.map((elem, ind)=> <Card addScore={props.addCurrent} setBest={props.setBest} key={elem.number} shuffle={shuffle} number={elem.number} reset={props.reset} setReset = {props.setReset} name={elem.name} src={elem.src} sounds={props.sounds}/>)}
     </div>
 }
 
