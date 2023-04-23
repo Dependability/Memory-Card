@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Memory Card Game
+
+This is a game that uses Adventure Time characters to test your memory skills!
+
+👉 [LIVE DEMO](https://dependability.github.io/Memory-Card/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
